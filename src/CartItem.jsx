@@ -59,6 +59,7 @@ const handleCheckoutShopping = (e) => {
 
   const handleRemove = (item) => {
     state.items = state.items.filter(item => item.name !== action.payload);
+    dispatch(removeItem(item.name));
   };
 
   // Calculate total cost based on quantity for an item
